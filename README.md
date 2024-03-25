@@ -29,3 +29,9 @@ foreach ($offline_host in $Global:offline_hosts) {
 }
 
 ```
+
+## Alternate method:
+
+```powershell
+Get-CimInstance –ComputerName CLIENT1 –ClassName Win32_ComputerSystem | Select-Object UserName
+```
